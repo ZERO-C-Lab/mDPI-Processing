@@ -1,5 +1,5 @@
 # mDPI-Processing
- Code and example data for processing mDPI sensor data and plotting distributions
+ Code and example data for processing mDPI sensor data and plotting distributions of zooplankton
 
 This repository includes code for:
 1) Reading in raw sensor data on the mDPI compact vehicle, in .txt or .csv format, and combining into one large .csv file (ProcessingRawSensorData_txts.R or ProcessingRawSensorData_csvs.R).
