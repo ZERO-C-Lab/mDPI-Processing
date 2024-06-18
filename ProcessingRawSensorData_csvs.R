@@ -34,7 +34,7 @@ tow_save_name <- paste0(cruise_name,"_",station,"_",diurnal)
 #modified julianmaker
 #slight change to the function to make hhmmss longer to include the extra digits
 julianmaker_unix <- function (t) {
-  datetime <- as.POSIXlt(t, origin="1970-01-01", tz = "EST")
+  datetime <- as.POSIXlt(t, origin="1970-01-01", tz = "EST5EDT")
   hhmmss <- substr(datetime,12,24)
   hr <- substr(hhmmss, 1,2)
   hr <- as.numeric(hr)
@@ -65,7 +65,7 @@ O2mol_to_mg <- function(O2umoles){
 
 #Use at the end for the final data frame
 hhmmss_fromUnixTime <- function(t){
-  datetime <- as.POSIXlt(t, origin="1970-01-01", tz = "EST")
+  datetime <- as.POSIXlt(t, origin="1970-01-01", tz = "EST5EDT")
   hhmmss <- substr(datetime,12,19)
   return(hhmmss)
 }
